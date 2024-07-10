@@ -3,7 +3,7 @@ name: Sample MobSf Deployment
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   deploy:
