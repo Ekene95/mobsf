@@ -1,0 +1,17 @@
+name: Sample MobSf Deployment 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Deploy to github pages
+        run: |
+          docker pull opensecurity/mobile-security-framework-mobsf:latest
+          docker run -it --rm -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
