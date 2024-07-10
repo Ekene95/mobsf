@@ -16,4 +16,11 @@ jobs:
           sudo apt install nodejs
           sudo node --version
           sudo npm --version
+          git clone https://github.com/juice-shop/juice-shop.git --depth 1
+          cd juice-shop
+          sudo npm install
+          sudo npm start
+          curl http://localhost:3000
           
+        
+     
